@@ -18,7 +18,9 @@ Route::get('/', function () {
 Route::get('/dashboard','DashboardController@dashboard')
     ->name('dashboard');
 Route::resource('mascotas','MascotaController');
-Route::get('starter','StarterController@starter')
-    ->name('starter');
 
-Auth::routes();
+
+
+Route::get('/perfil','PerfilController@edit')->name('perfil.edit');
+
+Auth::routes(['register' => false]);
